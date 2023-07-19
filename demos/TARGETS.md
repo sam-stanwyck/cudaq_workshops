@@ -1,5 +1,5 @@
-## Target 
-A CUDA Quantum `target` is a specification of the desired platform and simulator / QPU. It can be specified in C++ as a compile time flag in C++ and in Python as a runtime flag. Alteratively, it can also be specified within the application code. 
+## CUDA Quantum `target` 
+A `target` is a specification of the desired platform and simulator / QPU. It can be specified in C++ as a compile time flag in C++ and in Python as a runtime flag. Alteratively, it can also be specified within the application code. 
 
 ### Simulation backends
 - state-vector (`cuStateVec`) 
