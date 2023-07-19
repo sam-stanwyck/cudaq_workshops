@@ -27,5 +27,5 @@ CUDA Quantum programs run natively via backend-extensible circuit simulators. Th
 
 ## Targets
 A `--target <target-name>` flag can be specified at compilation for `C++` and at runtime for `Python`, which is a combination of the desired platform and simulator / QPU. 
-To get additional information on the simulators and backends, please see the file **add link to file**.
+To get additional information on the simulators and backends, go to [demos/TARGETS.md](demos/TARGETS.md).
 
