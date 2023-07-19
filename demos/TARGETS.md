@@ -1,5 +1,5 @@
 ## Target 
-A CUDA Quantum `target` is a specification of the desired platform and simulator / QPU.
+A CUDA Quantum `target` is a specification of the desired platform and simulator / QPU. It can be specified in C++ as a compile time flag in C++ and in Python as a runtime flag. Alteratively, it can also be specified within the application code. 
 
 ### Simulation backends
 - state-vector (`cuStateVec`) 
@@ -10,13 +10,14 @@ A CUDA Quantum `target` is a specification of the desired platform and simula
 -  Single GPU  	\
   ```--target nvidia```
     - Dramatic speedup over CPU
-    - For C++  `nvq++ --target nvidia ghz_state.cpp -o a .out`
-    - For Python `python3 --target nvidia ghz_state.py` 
+    - For e.g. with custatevec on a gpu  `nvq++ --target nvidia ghz_state.cpp -o a .out`
+    - For Python `python3 --target nvidia ghz_state.py`
+  
 
 - Multi-GPU \
 ```--target cuquantum_mgpu```
     - To increase the qubit count
-    - `nvq++ --target cuquantum_mgpu ghz_state.cpp -o a .out`
+    - with custatevce `nvq++ --target cuquantum_mgpu ghz_state.cpp -o a .out`
     - `mpiexec -np 2 ./a.out`
 
 - Multi-QPU \
@@ -25,8 +26,11 @@ A CUDA Quantum `target` is a specification of the desired platform and simula
     - Gives a taste of distributed quantum computing 
     - Asynchronous expectation value computation (`cudaq::observe_async(..)`)
     - Asynchronous sampling (`cudaq::sample_async(..)`)
-    - `nvq++ --target nvidia-mqpu ghz_state.cpp -o a .out`
-    - `mpiexec -np 2 ./a.out`
+    - To access this with custatevec
+  ```
+      $ nvq++ --target nvidia-mqpu ghz_state.cpp -o a .out
+      $ mpiexec -np 2 ./a.out
+  ```
 
 - Multi-node
     - GPU acceleration across the nodes  
