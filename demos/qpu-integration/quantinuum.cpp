@@ -20,6 +20,24 @@
 // nvq++ --target quantinuum --emulate quantinuum.cpp 
 // ./a.out 
 
+// Note - if you would like to run the following commands, you will need
+// an account from Quantinuum. If you have one, then you will also 
+// need to create a $HOME/.quantinuum_config file that contains 
+// your current API token and refresh keys. Here's a quick way to do so:
+//
+// curl -X POST -H "Content Type: application/json" -d '{ "email":"YOUR_EMAIL","password":"YOUR_PASSWORD" }' https://qapi.quantinuum.com/v1/login
+// (Note, you may need to `sudo apt-get update && sudo apt-get install curl`, if 
+// so the password for this container is cuda-quantum)
+// (Another note, to ensure your password is not saved in your ~/.bash_history, 
+// prepend the above curl command with a `SPACE`)
+// 
+// In the output you'll see `id-token` and `refresh-token`. Take these and create 
+// the following structure in $HOME/.quantinuum_config
+//
+// key: $id-token
+// refresh: $refresh-token
+// time: 0
+
 // To run on the remote Syntax Checker 
 // nvq++ --target quantinuum quantinuum.cpp 
 // ./a.out
