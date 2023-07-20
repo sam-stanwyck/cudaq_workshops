@@ -1,0 +1,14 @@
+{
+    "config": {
+        "emulate": "false",
+        "machine": "H1-1E",
+        "shots": "1000"
+    },
+    "jobs": [
+        [
+            "790a7b3c0da04e858ac59f791e7dfead",
+            "function_bell._Z4bellv"
+        ]
+    ],
+    "qpu": "quantinuum"
+}

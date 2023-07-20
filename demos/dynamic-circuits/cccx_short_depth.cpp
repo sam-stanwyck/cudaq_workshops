@@ -9,6 +9,15 @@
 #include <cudaq.h>
 #include <iostream>
 
+// Compile and run with 
+// 
+// nvq++ cccx_short_depth.cpp 
+// ./a.out 
+// 
+// Take a look at the IR with 
+// 
+// cudaq-quake cccx_short_depth.cpp | cudaq-opt --canonicalize
+
 /**
 In various cases, when cleaning up intermediate values produced during a quantum
 computation, it is possible to save resources by using measurement operations.
@@ -84,10 +93,12 @@ __qpu__ void cccx_measure_cleanup() {
 }
 
 int main() {
+  // Sample the above dynamic circuit
   auto result = cudaq::sample(1000, cccx_measure_cleanup);
+  // Can dump the counts to standard out
   result.dump();
+
+  // Can also get the most probable bit string
   std::cout << result.most_probable() << '\n';
   return 0;
 }
-
-// CHECK: 1111

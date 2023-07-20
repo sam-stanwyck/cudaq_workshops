@@ -18,6 +18,7 @@ int main() {
   counts.dump();
 
   // Create a depolarizing Kraus channel made up of two Kraus operators.
+  // This can also be done via the cudaq::depolarization_channel class  
   cudaq::kraus_channel depol({cudaq::complex{0.99498743710662, 0.0},
                               {0.0, 0.0},
                               {0.0, 0.0},

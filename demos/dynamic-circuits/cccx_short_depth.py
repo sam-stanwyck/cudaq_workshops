@@ -1,14 +1,7 @@
-# ============================================================================ #
-# Copyright (c) 2022 - 2023 NVIDIA Corporation & Affiliates.                   #
-# All rights reserved.                                                         #
-#                                                                              #
-# This source code and the accompanying materials are made available under     #
-# the terms of the Apache License 2.0 which accompanies this distribution.     #
-# ============================================================================ #
-
 
 import cudaq
 
+# Create a function that creates a Python kernel
 def cccx_measure_cleanup():
 
   kernel = cudaq.make_kernel()
@@ -41,14 +34,17 @@ def cccx_measure_cleanup():
   def thenBlock():
     kernel.cz(qubits[0], qubits[1])
 
+  # Can add if statements to the kernel
   kernel.c_if(result, thenBlock)
 
   kernel.mz(qubits)
   return kernel
 
-
+# Create the kernel
 my_kernel = cccx_measure_cleanup()
 print(my_kernel)
+
+# Sample the dynamic circuit 
 result = cudaq.sample(my_kernel)
 print(result)
 print(f"measured state = {result.most_probable()}")
