@@ -14,10 +14,13 @@ A `target` is a specification of the desired platform and simulator / QPU. It 
 - Multi-node 
 
 ### Targets
-- `default` 
+- `default`
+ 	- qpp, CPU-based and multithreaded
+        - In C++, `nvq++ ghz_state.cpp -o a.out`
+        - In Python, `python3 ghz_state.py` 
 - `nvidia` 
 	- custatevec with single-GPU
-        - For instance, in C++, `nvq++ --target nvidia ghz_state.cpp -o a.out`
+        - In C++, `nvq++ --target nvidia ghz_state.cpp -o a.out`
         - In Python, `python3 --target nvidia ghz_state.py`  
 - `nvidia-mqpu` 
 	- custatevec with multi-QPU
