@@ -1,6 +1,6 @@
-# To run this file,
-# install openfermionpyscf and then
-# python3 test.py --target nvidia -load chemistry
+# To run this file, you'll have to
+#  first install openfermionpyscf and then
+# `python3 test.py --target nvidia -load chemistry`
 
 import cudaq, numpy as np 
 
