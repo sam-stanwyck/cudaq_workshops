@@ -1,6 +1,6 @@
 // Compile and run with:
 // ```
-// nvq++ demo1.cpp -o a.out --target nvidia && ./a.out
+// nvq++ ghz_state.cpp -o a.out --target nvidia && ./a.out
 // ```
 
 // This example is meant to demonstrate the cuQuantum
