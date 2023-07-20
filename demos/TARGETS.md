@@ -36,7 +36,7 @@ A `target` is a specification of the desired platform and simulator / QPU. It 
 - `ionq` 
 - more!
 
-To print a list of all the targets and use, see 
+To print a list of all the targets in Python:
 
 ```
 import cudaq
