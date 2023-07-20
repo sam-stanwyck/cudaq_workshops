@@ -52,7 +52,9 @@ for t in targets:
      print(t)
 ```
 
-
+<img src="target_list.png"
+     alt="Targets"
+     style="float: left; margin-right: 10px;" />
 
 Note: Some of these targets are not available for this workshop. 
 
