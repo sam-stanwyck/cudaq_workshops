@@ -9,13 +9,6 @@
 /// ./a.out
 
 int main() {
-  // Warm up the GPU
-  // auto warmUp = cudaq::make_kernel();
-  // auto q = warmUp.qalloc();
-  // warmUp.x(q);
-  // cudaq::sample_async(warmUp).get();
-  // cudaq::sample_async(1, warmUp).get();
-  // auto & p = cudaq::get_platform();
 
   // Create the LiH molecule, sto-3g basis
   // Should be 12 qubits with 4 electrons
