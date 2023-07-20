@@ -14,26 +14,26 @@ A `target` is a specification of the desired platform and simulator / QPU. It 
 - Multi-node \
 
 ### Targets
-- `default` \
-- `nvidia` \
+- `default` 
+- `nvidia` 
 	- custatevec with single-GPU
         - `nvq++ --target nvidia ghz_state.cpp -o a.out`
         - `python3 --target nvidia ghz_state.py`  
-- `nvidia-mqpu` \
+- `nvidia-mqpu` 
 	- custatevec with multi-QPU
         ```
         $ nvq++ --target nvidia-mqpu ghz_state.cpp -o a.out
         $ mpiexec -np 2 ./a.out
         ```
-- `cuquantum_mgpu` \
+- `cuquantum_mgpu` 
 	- custatevec with multi-GPU
         - `--target cuquantum_mgpu`
         - Not covered in this workshop
-- `density-matrix-cpu` \
+- `density-matrix-cpu` 
 	- CPU-only multithreaded density matrix emulation
-- `quantinuum` \
+- `quantinuum` 
         - `--target quantinuum`
-- `ionq` \
+- `ionq` 
 - more!
 
 To print a list of all the targets and use, see 
@@ -49,7 +49,7 @@ for t in targets:
 
 
 
-Note: Some of these targets are not be available for this workshop. 
+Note: Some of these targets are not available for this workshop. 
 
 
 
