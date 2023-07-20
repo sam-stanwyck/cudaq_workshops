@@ -3,39 +3,53 @@ A `target` is a specification of the desired platform and simulator / QPU. It 
 
 ### Simulation backends
 - state-vector (`cuStateVec`) 
-- density-matrix (`qpp`)
+- density-matrix (`dm`) 
 - tensor-network (`cuTensorNet`)
 
-### Hardware backends 
--  Single GPU  	\
-  ```--target nvidia```
-    - Dramatic speedup over CPU
-    - For e.g. with custatevec on a gpu  `nvq++ --target nvidia ghz_state.cpp -o a .out`
-    - For Python `python3 --target nvidia ghz_state.py`
-  
-
+### Hardware backends
+- CPU only   \
+- Single GPU   \
 - Multi-GPU \
-```--target cuquantum_mgpu```
-    - To increase the qubit count
-    - with custatevce `nvq++ --target cuquantum_mgpu ghz_state.cpp -o a .out`
-    - `mpiexec -np 2 ./a.out`
-
 - Multi-QPU \
- ```--target nvidia-mqpu ``` 
-    - A virtual QPU for every GPU 
-    - Gives a taste of distributed quantum computing 
-    - Asynchronous expectation value computation (`cudaq::observe_async(..)`)
-    - Asynchronous sampling (`cudaq::sample_async(..)`)
-    - To access this with custatevec
-  ```
-      $ nvq++ --target nvidia-mqpu ghz_state.cpp -o a .out
-      $ mpiexec -np 2 ./a.out
-  ```
+- Multi-node \
 
-- Multi-node
-    - GPU acceleration across the nodes  
+### Targets
+- `default` \
+- `nvidia` \
+	- custatevec with single-GPU
+        - `nvq++ --target nvidia ghz_state.cpp -o a.out`
+        - `python3 --target nvidia ghz_state.py`  
+- `nvidia-mqpu` \
+	- custatevec with multi-QPU
+        ```
+        $ nvq++ --target nvidia-mqpu ghz_state.cpp -o a.out
+        $ mpiexec -np 2 ./a.out
+        ```
+- `cuquantum_mgpu` \
+	- custatevec with multi-GPU
+        - `--target cuquantum_mgpu`
+        - Not covered in this workshop
+- `density-matrix-cpu` \
+	- CPU-only multithreaded density matrix emulation
+- `quantinuum` \
+        - `--target quantinuum`
+- `ionq` \
+- more!
 
-Note: Some of these targets will not be available for this workshop. 
+To print a list of all the targets and use, see 
+
+```
+import cudaq
+
+targets = cudaq.get_targets()
+
+for t in targets:
+     print(t)
+```
+
+
+
+Note: Some of these targets are not be available for this workshop. 
 
 
 
