@@ -31,7 +31,7 @@ A `target` is a specification of the desired platform and simulator / QPU. It 
         - Not covered in this workshop
 - `density-matrix-cpu` 
 	- CPU-only multithreaded density matrix emulation
-- `quantinuum` 
+- `quantinuum` \
         - `--target quantinuum`
 - `ionq` 
 - more!
