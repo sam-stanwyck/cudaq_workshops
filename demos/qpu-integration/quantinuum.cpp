@@ -47,6 +47,11 @@
 // #ignore nvq++ warnings, see Issue 258, PR 443 
 // ./a.out 
 
+// You can print the QIR Base Profile contents (the code that 
+// gets submitted to Quantinuum) with 
+// 
+// CUDAQ_DUMP_JIT_IR=1 ./a.out
+
 __qpu__ void bell() {
   cudaq::qreg q(2);
   h(q[0]);
