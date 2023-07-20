@@ -7,11 +7,11 @@ A `target` is a specification of the desired platform and simulator / QPU. It 
 - tensor-network (`cuTensorNet`)
 
 ### Hardware backends
-- CPU only   \
-- Single GPU   \
-- Multi-GPU \
-- Multi-QPU \
-- Multi-node \
+- CPU only   
+- Single GPU   
+- Multi-GPU 
+- Multi-QPU 
+- Multi-node 
 
 ### Targets
 - `default` 
