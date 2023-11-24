@@ -1,0 +1,3 @@
+[submodule "nersc_quantum_day"]
+	path = nersc_quantum_day
+	url = https://github.com/poojarao8/nersc-quantum-day.git
