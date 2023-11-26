@@ -32,7 +32,8 @@
 
    a. Check host name of compute node you are currently on.
 
-       $ hostname gXXXX.abci.local
+       $ hostname
+       gXXXX.abci.local
 
    b. Get CUDA Quantum docker image and build singularity container. Set SINGULARITY_TMPDIR environment variable to use local scratch in order to avoid failure due to insufficient space in /temp.
 
