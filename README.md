@@ -43,9 +43,8 @@
 
 6. Get hands-on materials.
 
-        $ git clone https://github.com/poojarao8/nersc-quantum-day.git
+        $ git clone https://github.com/sam-stanwyck/cudaq_workshops.git
 
-        $ cd nersc-quantum-day
    
 7. Run CUDA Quantum container.
 
