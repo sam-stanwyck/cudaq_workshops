@@ -58,9 +58,9 @@
 
         $ ssh -N -L 8888:hostname:8888 -l username -i /path/identity_file -p 10022 localhost
 
-10. Open the following URL with a browser. Specify the token you got when jupyter-lab had been launched for token_string.
+10. Open the following URL with a browser.
 
-        http://127.0.0.1:8888/?token=token_string
+        http://127.0.0.1:8888/lab
 
 
 
